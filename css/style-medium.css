@@ -44,7 +44,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   color: #aaa;
   font-size: 10pt;
   letter-spacing: 1px;
-  padding: 15px 0 10px 0;
+  padding: 20px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -150,7 +150,7 @@ nav h1 a {
 	font-family: Arial,sans-serif;
 	margin: 10px 0px 10px 0;
 	min-height: 380px;
-	padding: 5%;
+	padding: 4%;
 	text-align: left;
 	width: 50%;
 	box-sizing: border-box;

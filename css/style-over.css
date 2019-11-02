@@ -9,7 +9,8 @@ body,td,th,p{
 }
 body {
 	background-color: #fdfdfd;
-	margin: 0;
+  width: 1100px;
+	margin: 0 auto;
 	position:relative;
 }
 ul, li {
@@ -194,14 +195,14 @@ nav h1 a {
   width: 100%;
   z-index: 1000;
 }
-.inside #map-container {
-	background: blue none repeat scroll 0 0;
-	height: 87%;
-	position: fixed;
-	right: 15px;
-	top: 99px;
-	width: 64%;
-}
+/* .inside #map-container {
+  background: blue none repeat scroll 0 0;
+  height: 87%;
+  position: fixed;
+  right: 0;
+  top: 99px;
+  width: 50%;
+} */
 .inside #map {
   background-color: #ccc;
   height: 106%;
@@ -246,7 +247,7 @@ nav h1 a {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
   padding: 100px 18px 15px;
-  width: 35%;
+  width: 50%;
 }
 #reviews-container {
   padding: 10px 18px 50px;

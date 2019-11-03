@@ -67,11 +67,11 @@ nav h1 a {
   text-transform: uppercase;
 }
 #breadcrumb {
-    padding: 7px 13px;
-    list-style: none;
-    background-color: #eee;
-    font-size: 17px;
-    margin: 0;
+	padding: 7px 13px;
+	list-style: none;
+	background-color: #eee;
+	font-size: 17px;
+	margin: 0;
     /* width: calc(50% - 80px); */
 }
 
@@ -89,7 +89,7 @@ nav h1 a {
 
 /* Add a color to all links inside the list */
 #breadcrumb li a {
-    color: #0275d8;
+    color: #0702d8;
     text-decoration: none;
 }
 

@@ -279,3 +279,55 @@ nav h1 a {
 #restaurant-hours td {
   color: #666;
 }
+
+/* ====================== Accessibility Styles ====================== */
+
+#restaurants-list li a:focus,
+#restaurants-list li a:hover {
+  background-color: #075c85;
+	outline-color: #ac2929;
+}
+
+nav a:hover,
+nav a:focus {
+color: #ac2929;
+font-weight: bold;
+letter-spacing: 12px;
+outline-color: #fff;
+padding-left: 13px;
+}
+
+footer a:hover,
+footer a:focus {
+color: #ac2929;
+letter-spacing: 3px;
+outline-color: #fff;
+padding: 2px 12px;
+}
+.filter-options select:hover,
+.filter-options select:focus {
+	background-color: #ac2929;
+	color: #fff;
+}
+
+#breadcrumb li a:focus,
+#breadcrumb li a:hover {
+	background-color: #ac2929;
+	color: #fff;
+	padding: 1px 12px 3px;
+}
+/* Style for the skip link */
+.skip-link {
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: -1000px;
+  background-color: #ac2929;
+  padding: 5px 10px;
+	color: #fff;
+}
+.skip-link:focus {
+  left: 15px;
+	color: #fff;
+	outline-color: white;
+}

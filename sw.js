@@ -21,16 +21,16 @@ self.addEventListener('install', function(event) {
       return cache.addAll([
         '/',
         '/restaurant.html',
-        'css/style-small.css',
-        'css/style-medium.css',
-        'css/style-large.css',
-        'css/style-over.css',
         '/js/dbhelper.js',
         '/js/secret.js',
         '/js/main.js',
         '/js/restaurant_info.js',
         'js/register-sw.js',
-        'data/restaurants.json'
+        'data/restaurants.json',
+        'css/style-small.css',
+        'css/style-medium.css',
+        'css/style-large.css',
+        'css/style-over.css',
       ]);
     })
   );
@@ -48,6 +48,16 @@ self.addEventListener('activate', function(event) {
           return caches.delete(cacheName);
         })
       );
+    })
+  );
+});
+
+// Hijack fetch requests
+self.addEventListener('fetch', function(event) {
+  // Respond with cache, if not, falling back to network.
+  event.respondWith(
+    caches.match(event.request).then(function(response) {
+      return response || fetch(event.request);
     })
   );
 });

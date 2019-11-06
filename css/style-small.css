@@ -203,7 +203,7 @@ nav h1 a {
   z-index: 1000;
 }
 .inside #map-container {
-	background: blue none repeat scroll 0 0;
+	/* background: blue none repeat scroll 0 0; */
 	height: 225px;
 	position: absolute;
 	/* right: 0px;
@@ -286,6 +286,21 @@ nav h1 a {
 #reviews-list li p {
   margin: 0 0 10px;
 }
+
+#reviews-list li p:nth-child(1) {
+	background: #ac2929;
+  font-weight: 600;
+  width: 100%;
+  padding: 2px 20px;
+  position: relative;
+  left: -10px;
+  color: #fff;
+}
+
+#reviews-list li p:nth-child(3) {
+  font-weight: 600;
+}
+
 #restaurant-hours td {
   color: #666;
 }

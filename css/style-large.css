@@ -195,16 +195,15 @@ nav h1 a {
   z-index: 1000;
 }
 .inside #map-container {
-	background: blue none repeat scroll 0 0;
-	height: 87%;
-	position: fixed;
-	right: 15px;
-	top: 99px;
-	width: 64%;
+  height: calc(100% - 130px);
+  position: fixed;
+  right: 15px;
+  top: 99px;
+  width: 64%;
 }
 .inside #map {
   background-color: #ccc;
-  height: 106%;
+  height: calc(100% - 50px);
   width: 100%;
 }
 .inside #footer {
@@ -276,6 +275,17 @@ nav h1 a {
 #reviews-list li p {
   margin: 0 0 10px;
 }
+
+#reviews-list li p:nth-child(1) {
+	background: #ac2929;
+  font-weight: 600;
+  width: 100%;
+  padding: 2px 20px;
+  position: relative;
+  left: -20px;
+  color: #fff;
+}
+
 #restaurant-hours td {
   color: #666;
 }

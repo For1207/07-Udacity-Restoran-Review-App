@@ -54,6 +54,17 @@ self.addEventListener('activate', function(event) {
 
 // Hijack fetch requests
 self.addEventListener('fetch', function(event) {
+  const requestUrl = new URL(event.request.url);
+  // Exept request from our app only
+  if (requestUrl.origin === location.origin) {
+
+    // Respond with restaurant.html when the app makes
+    // a request to the same page with any parameter.
+    if (requestUrl.pathname.startsWith('/restaurant.html')) {
+      event.respondWith(caches.match('/restaurant.html'));
+      return; 
+    }
+  }
   // Respond with cache, if not, falling back to network.
   event.respondWith(
     caches.match(event.request).then(function(response) {

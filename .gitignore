@@ -1,6 +1,3 @@
-# .gitignore
-js/secret.js
-
 # ignore dependencies
 node_modules/
 

@@ -112,7 +112,7 @@ nav h1 a {
   align-items: center;
 }
 .filter-options h2 {
-	color: #ffa500;
+	color: #fff;
   font-size: 1.1rem;
   font-weight: normal;
   line-height: 1;
@@ -340,4 +340,36 @@ padding: 2px 12px;
   left: 15px;
 	color: #fff;
 	outline-color: white;
+}
+
+/* ====================== Offline Maps Message Styles ====================== */
+
+.maps-offline {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color:#ac2929;
+	text-align: center;
+}
+
+.maps-offline > .warning-header,
+.maps-offline > .warning-message {
+  font-family: Arial,sans-serif;
+  font-weight: 200;
+  letter-spacing: 0;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  line-height: 1.1;
+	padding: 0 5px;
+}
+
+.maps-offline > .warning-header {
+	color: #ac2929;
+  font-size: 15pt;
+}
+
+.maps-offline > .warning-message {
+  color: #01447e;
+  font-size: 10pt;
 }

@@ -34,8 +34,16 @@ initMap = () => {
         DBHelper.mapMarkerForRestaurant(self.restaurant, self.newMap);
       } catch(error) {
         console.log("Map couldn't be initialized", error);
+        // Set map as offline
+        DBHelper.mapOffline();
         }
+      } else {
+        //  Set map as offline
+        DBHelper.mapOffline();
       }
+
+
+
       fillBreadcrumb();
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.newMap);
     }

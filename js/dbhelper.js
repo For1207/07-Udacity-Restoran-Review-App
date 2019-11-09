@@ -201,4 +201,12 @@ class DBHelper {
     return marker;
   } */
 
+static mapOffline() {
+    const map = document.getElementById('map');
+    map.className = "maps-offline";
+    map.innerHTML =
+    `<div class="warning-header">Maps can not be displayed</div>
+    <div class="warning-message">Are you offline?</div>`;
+  }
+
 }

@@ -1,5 +1,4 @@
 @charset "utf-8";
-/* CSS Document */
 
 body,td,th,p{
 	font-family: Arial, Helvetica, sans-serif;
@@ -7,31 +6,38 @@ body,td,th,p{
 	color: #333;
 	line-height: 1.5;
 }
+
 body {
 	background-color: #fdfdfd;
 	margin: 0;
 	position:relative;
 }
+
 ul, li {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 13pt;
 	color: #333;
 }
+
 a {
-	color: #ffa500;
+	color: #fff;
 	text-decoration: none;
 }
+
 a:hover, a:focus {
 	color: #ac2929;
 	text-decoration: none;
 }
+
 a img{
 	border: none 0px #fff;
 }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0 0 20px;
 }
+
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -40,15 +46,17 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   background-color: #f3f3f3;
   min-height: 100%;
 }
+
 #footer {
 	background-color: #253b56;
   color: #aaa;
   font-size: 9pt;
   letter-spacing: 1px;
-    padding: 20px;
+  padding: 20px;
   text-align: center;
   text-transform: uppercase;
 }
+
 /* ====================== Navigation ====================== */
 nav {
   width: 100%;
@@ -57,9 +65,11 @@ nav {
   text-align: center;
   display: flex;
 }
+
 nav h1 {
   margin: auto;
 }
+
 nav h1 a {
   color: #fff;
   font-size: 13pt;
@@ -67,6 +77,7 @@ nav h1 a {
   letter-spacing: 10px;
   text-transform: uppercase;
 }
+
 #breadcrumb {
 	padding: 7px 13px;
   list-style: none;
@@ -79,33 +90,35 @@ nav h1 a {
 
 /* Display list items side by side */
 #breadcrumb li {
-    display: inline;
+  display: inline;
 }
 
 /* Add a slash symbol (/) before/behind each list item */
 #breadcrumb li+li:before {
-    padding: 8px;
-    color: black;
-    content: "/\00a0";
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
 }
 
 /* Add a color to all links inside the list */
 #breadcrumb li a {
-    color: #0702d8;
-    text-decoration: none;
+  color: #0702d8;
+  text-decoration: none;
 }
 
 /* Add a color on mouse-over */
 #breadcrumb li a:hover {
-    color: #01447e;
-    text-decoration: underline;
+  color: #01447e;
+  text-decoration: underline;
 }
+
 /* ====================== Map ====================== */
 #map {
   height: 400px;
   width: 100%;
   background-color: #ccc;
 }
+
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
   width: 100%;
@@ -113,6 +126,7 @@ nav h1 a {
   background-color: #253b56;
   align-items: center;
 }
+
 .filter-options h2 {
 	color: #fff;
   font-size: 1rem;
@@ -121,6 +135,7 @@ nav h1 a {
   margin: 0 10px;
   padding-top: 10px;
 }
+
 .filter-options select {
 	background-color: #fff;
 	border: 1px solid #fff;
@@ -146,6 +161,7 @@ nav h1 a {
   justify-content: space-around;
   box-sizing: border-box;
 }
+
 #restaurants-list li {
 	background-color: #fff;
 	border: 2px solid #ccc;
@@ -157,14 +173,14 @@ nav h1 a {
 	width: 100%;
 	box-sizing: border-box;
 }
+
 #restaurants-list .restaurant-img {
   background-color: #ccc;
   display: block;
   margin: 0;
   max-width: 100%;
-  /* min-height: 248px;
-  min-width: 100%; */
 }
+
 #restaurants-list li h1 {
   color: #ac2929;
   font-family: Arial,sans-serif;
@@ -175,10 +191,12 @@ nav h1 a {
   margin: 20px 0 10px;
   text-transform: uppercase;
 }
+
 #restaurants-list p {
   margin: 0;
   font-size: 11pt;
 }
+
 #restaurants-list li a {
 	background-color: #ac2929;
   border-bottom: 3px solid #eee;
@@ -194,33 +212,32 @@ nav h1 a {
   width: 100%;
 }
 
-
 /* ====================== Restaurant Details ====================== */
 .inside header {
-  /* position: fixed; */
   top: 0;
   width: 100%;
   z-index: 1000;
 }
+
 .inside #map-container {
-	/* background: blue none repeat scroll 0 0; */
 	height: 225px;
 	position: absolute;
-	/* right: 0px;
-	margin-top: 0px; */
 	width: 100%;
 }
+
 .inside #map {
   background-color: #ccc;
   height: 100%;
   width: 100%;
 }
+
 .inside #footer {
   bottom: 0;
   position: absolute;
   width: 100%;
 	box-sizing: border-box;
 }
+
 #restaurant-name {
 	color: #ac2929;
   font-family: Arial,sans-serif;
@@ -231,13 +248,16 @@ nav h1 a {
   text-transform: uppercase;
   line-height: 1.1;
 }
+
 #restaurant-img {
 	width: 100%;
 }
+
 #restaurant-address {
   font-size: 13pt;
   margin: 10px 0px;
 }
+
 #restaurant-cuisine {
   background-color: #ac2929;
   color: #ddd;
@@ -250,16 +270,20 @@ nav h1 a {
   text-transform: uppercase;
   width: 100%;
 }
-#restaurant-container, #reviews-container {
+
+#restaurant-container,
+#reviews-container {
 	border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
   padding: 225px 15px 0 15px;
   width: 100%;
   box-sizing: border-box;
 }
+
 #reviews-container {
   padding: 20px 15px 50px;
 }
+
 #reviews-container h2 {
   color: #ac2929;
   font-size: 22pt;
@@ -267,10 +291,12 @@ nav h1 a {
   letter-spacing: -1px;
   padding-bottom: 1pt;
 }
+
 #reviews-list {
   margin: 0;
   padding: 0;
 }
+
 #reviews-list li {
   background-color: #fff;
   border: 2px solid #f3f3f3;
@@ -278,11 +304,11 @@ nav h1 a {
   list-style-type: none;
   margin: 0 0 30px;
   overflow: hidden;
-  /* padding: 0 20px 20px; */
   position: relative;
   width: 100%;
   box-sizing: border-box;
 }
+
 #reviews-list li p {
   margin: 0 0 10px;
 }
@@ -306,7 +332,6 @@ nav h1 a {
 }
 
 /* ====================== Accessibility Styles ====================== */
-
 #restaurants-list li a:focus,
 #restaurants-list li a:hover {
   background-color: #075c85;
@@ -315,20 +340,21 @@ nav h1 a {
 
 nav a:hover,
 nav a:focus {
-color: #ac2929;
-font-weight: bold;
-letter-spacing: 12px;
-outline-color: #fff;
-padding-left: 13px;
+	color: #ac2929;
+	font-weight: bold;
+	letter-spacing: 12px;
+	outline-color: #fff;
+	padding-left: 13px;
 }
 
 footer a:hover,
 footer a:focus {
-color: #ac2929;
-letter-spacing: 3px;
-outline-color: #fff;
-padding: 2px 12px;
+	color: #ac2929;
+	letter-spacing: 3px;
+	outline-color: #fff;
+	padding: 2px 12px;
 }
+
 .filter-options select:hover,
 .filter-options select:focus {
 	background-color: #ac2929;
@@ -341,7 +367,8 @@ padding: 2px 12px;
 	color: #fff;
 	padding: 1px 12px 3px;
 }
-/* Style for the skip link */
+
+/* ====================== Style for the skip lin ====================== */
 .skip-link {
   display: block;
   position: absolute;
@@ -351,6 +378,7 @@ padding: 2px 12px;
   padding: 5px 10px;
 	color: #fff;
 }
+
 .skip-link:focus {
   left: 15px;
 	color: #fff;
@@ -358,7 +386,6 @@ padding: 2px 12px;
 }
 
 /* ====================== Offline Maps Message Styles ====================== */
-
 .maps-offline {
 	display: flex;
 	flex-direction: column;

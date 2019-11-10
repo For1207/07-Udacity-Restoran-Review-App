@@ -4,8 +4,8 @@ const appName = "restaurant-reviews"
 const staticCacheName = appName + "-v1.0";
 
 // Images cache.
-// Providing a separate cache for images we avoid deleting them every time
-// the app is upgraded
+// Providing a separate cache for images we avoid deleting
+// them every time the app is upgraded
 const contentImgsCache = appName + "-images";
 
 // Array which holds all caches
@@ -83,7 +83,6 @@ function serveImage(request) {
   let imageStorageUrl = request.url;
 
   // Make a new URL with a stripped suffix and extension.
-  // For example, img/1-small.jpg will be cached using the key img/1.
   // Only one image will be cached, and used regardless of the image size will be requested next time.
   imageStorageUrl = imageStorageUrl.replace(/-small\.\w{3}|-medium\.\w{3}|-large\.\w{3}/i, '');
 

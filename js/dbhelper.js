@@ -25,7 +25,7 @@ class DBHelper {
     xhr.send();
   }
 
-   // Fetch a restaurant by its ID.
+  // Fetch a restaurant by its ID.
   static fetchRestaurantById(id, callback) {
     // fetch all restaurants with proper error handling.
     DBHelper.fetchRestaurants((error, restaurants) => {

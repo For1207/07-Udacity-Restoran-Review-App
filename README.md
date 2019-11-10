@@ -1,33 +1,56 @@
-# Mobile Web Specialist Certification Course
+# Restaurant Reviews Website
 ---
-#### _Three Stage Course Material Project - Restaurant Reviews_
 
-## Project Overview: Stage 1
+## Project Overview
 
-For the **Restaurant Reviews** projects, you will incrementally convert a static webpage to a mobile-ready web application. In **Stage One**, you will take a static design that lacks accessibility and convert the design to be responsive on different sized displays and accessible for screen reader use. You will also add a service worker to begin the process of creating a seamless offline experience for your users.
+In this project we need to convert a static webpage to an offline-ready web
+application. The task can be broken in three main categories:
+  1. Convert the design to be responsive on different displays.
+  2. Make the app accessible for screen reader use.
+  3. A service worker needs to be added in order to create a seamless offline experience for users.
 
-### Specification
+A starter code for a restaurant reviews website was provided.
 
-You have been provided the code for a restaurant reviews website. The code has a lot of issues. It’s barely usable on a desktop browser, much less a mobile device. It also doesn’t include any standard accessibility features, and it doesn’t work offline at all. Your job is to update the code to resolve these issues while still maintaining the included functionality.
+## Implementation
 
-### Project Rubric
+### Convert the Design to Be Responsive
 
-Your project will be evaluated by a Udacity code reviewer according to the [Restaurant Reviews project rubric](https://review.udacity.com/#!/rubrics/1090/view). Please review for detailed project requirements. The rubric should be a resource you refer to periodically to make sure your project meets specifications.
+The website has three different layouts for three different viewport sizes: 600 px, 960 px and 1280 px. It makes it responsive on different sized displays.
+In order to make the website's images responsive, three set of images was used: small, medium and large.
 
-### What do I do from here?
+### Make the App accessible for Screen Readers
 
-1. In this folder, start up a simple HTTP server to serve up the site files on your local computer. Python has some simple tools to do this, and you don't even need to know Python. For most people, it's already installed on your computer.
+To make the website accessible for screen readers:
+  1. `Alt` attribute was added to all images.
+  2. Style of the links and buttons was changed, so users can spot links currently focused: `:hover` and `:focus` states has different colors.
+  3. A 'skip link' is provided, it allows users to skip the map and go straight to the main content.
+  4. Aria-lables, roles and links added according to ARIA recommendations.
 
-    * In a terminal, check the version of Python you have: `python -V`. If you have Python 2.x, spin up the server with `python -m SimpleHTTPServer 8000` (or some other port, if port 8000 is already in use.) For Python 3.x, you can use `python3 -m http.server 8000`. If you don't have Python installed, navigate to Python's [website](https://www.python.org/) to download and install the software.
-   * Note -  For Windows systems, Python 3.x is installed as `python` by default. To start a Python 3.x server, you can simply enter `python -m http.server 8000`.
-2. With your server running, visit the site: `http://localhost:8000`, and look around for a bit to see what the current experience looks like.
-3. Explore the provided code, and start making a plan to implement the required features in three areas: responsive design, accessibility and offline use.
-4. Write code to implement the updates to get this site on its way to being a mobile-ready website.
+### A Service Worker and Caches Added
 
-## Leaflet.js and Mapbox:
+The goal of the last stage of the project - make the website available for offline use.
 
-This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/). You need to replace `<your MAPBOX API KEY HERE>` with a token from [Mapbox](https://www.mapbox.com/). Mapbox is free to use, and does not require any payment information.
+  1. A service worker has been added in order to retrieve or cache resource requests.
+  2. A separate cache for website's images created, so once an image has been cached once, the service worker can respond with it next time it's requested.
+  3. A warning message that the website is offline and maps can not be displayed at the moment added.
 
-### Note about ES6
+  ### Hot to Start the website
 
-Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future-proofing JavaScript code. As much as possible, try to maintain use of ES6 in any additional JavaScript you write.
+1. In this folder, start up a simple HTTP server to serve up the site files on your local computer. Python has some simple tools to do this.
+
+  - If you have Python 2.x, spin up the server with `python -m SimpleHTTPServer 8000`.
+  - For Python 3.x, you can use `python3 -m http.server 8000`.
+
+2. With your server running, visit the site: `http://localhost:8000`.
+
+### References
+
+1. [Udacity Project Instructions](https://review.udacity.com/#!/rubrics/1090/view)
+2. [Responsive Images on MDN](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+3. ["Skip Navigation" Links](https://webaim.org/techniques/skipnav/)
+4. [ARIA Recommendations](https://webaim.org/techniques/aria/)
+5. [ARIA live regions on MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
+6. [The offline cookbook by Jake Archibald](https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/)
+7. [A Walkthrough by Alexandro Perez](https://alexandroperez.github.io/mws-walkthrough/?1.28.handling-offline-maps-with-custom-content)
+8. [Project 1 MWS Webinar with Doug Brown](https://www.youtube.com/watch?v=92dtrNU1GQc)
+9. [Restaurant Reviews App, Stage 1 Walkthrough with Ryan Waite](https://www.youtube.com/watch?v=ag_jBDFAL0U&t=2433s)
